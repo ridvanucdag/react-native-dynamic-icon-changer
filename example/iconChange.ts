@@ -13,9 +13,7 @@ export enum IconNames {
 export const getIconName = (iconKey: number): string | null => {
   switch (iconKey) {
     case 1:
-      return Platform.OS === 'android'
-        ? IconNames.MainApplication
-        : IconNames.AppIcon;
+      return Platform.OS === 'android' ? IconNames.MainApplication : null;
     case 2:
       return Platform.OS === 'android'
         ? IconNames.MainApplication2
@@ -25,9 +23,7 @@ export const getIconName = (iconKey: number): string | null => {
         ? IconNames.MainApplication3
         : IconNames.AppIcon3;
     default:
-      return Platform.OS === 'android'
-        ? IconNames.MainApplication
-        : IconNames.AppIcon;
+      return Platform.OS === 'android' ? IconNames.MainApplication : null;
   }
 };
 
@@ -36,7 +32,7 @@ export const iconChange = async (iconKey: number): Promise<void> => {
   try {
     getAppIcon()
       .then((currentIcon: string) => {
-        if (currentIcon !== iconName && iconName) {
+        if (currentIcon !== (iconName ?? IconNames.AppIcon)) {
           changeAppIcon(iconName);
         }
       })

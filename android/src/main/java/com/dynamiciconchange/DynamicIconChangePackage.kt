@@ -23,9 +23,10 @@ class DynamicIconChangePackage : TurboReactPackage() {
             moduleInfos[DynamicIconChangeModuleImpl.NAME] = ReactModuleInfo(
                 DynamicIconChangeModuleImpl.NAME,
                 DynamicIconChangeModuleImpl.NAME,
-                false,
-                false,
-                false,
+                false, // canOverrideExistingModule
+                false, // needsEagerInit
+                true,  // hasConstants
+                false, // isCxxModule
                 isTurboModule
             )
             moduleInfos

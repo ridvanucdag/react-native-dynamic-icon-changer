@@ -7,14 +7,17 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import com.facebook.react.bridge.Promise
+import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.bridge.ReactContextBaseJavaModule
 
-class DynamicIconChangeModuleImpl {
+class DynamicIconChangeModuleImpl(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
     private var iconChanged = false
     private var componentClass: String = ""
     private val classesToKill = mutableSetOf<String>()
 
-    fun getAppIcon(activity: Activity, promise: Promise) {
+    fun getAppIcon(promise: Promise) {
+        val activity: Activity? = currentActivity
         if (activity == null) {
             promise.reject("ANDROID:ACTIVITY_NOT_FOUND", "Activity not found")
             return
@@ -33,7 +36,8 @@ class DynamicIconChangeModuleImpl {
         }
     }
 
-    fun changeAppIcon(activity: Activity, packageName: String, iconName: String?, promise: Promise) {
+    fun changeAppIcon(iconName: String, promise: Promise) {
+        val activity: Activity? = currentActivity
         if (activity == null) {
             promise.reject("ACTIVITY_NOT_FOUND", "The activity is null")
             return
@@ -43,7 +47,8 @@ class DynamicIconChangeModuleImpl {
             return
         }
 
-        val newIconName = iconName ?: "Default"
+        val packageName = activity.packageName
+        val newIconName = iconName
         val activeClass = "$packageName.MainActivity$newIconName"
 
         if (componentClass == activeClass) {
@@ -58,12 +63,10 @@ class DynamicIconChangeModuleImpl {
                 PackageManager.DONT_KILL_APP
             )
 
-            val intent = Intent(activity, activity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            val intent = Intent(activity, activity::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            }
             activity.startActivity(intent)
-
-            val activityManager = activity.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-            activityManager.restartPackage(activity.packageName)
 
             promise.resolve(newIconName)
         } catch (e: Exception) {
@@ -75,23 +78,8 @@ class DynamicIconChangeModuleImpl {
         iconChanged = true
     }
 
-    fun completeIconChange(activity: Activity) {
-        if (!iconChanged) return
-
-        classesToKill.remove(componentClass)
-        classesToKill.forEach {
-            activity.packageManager.setComponentEnabledSetting(
-                ComponentName(activity.packageName, it),
-                PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-                PackageManager.DONT_KILL_APP
-            )
-        }
-        classesToKill.clear()
-        iconChanged = false
-    }
-
-    fun onActivityPaused(activity: Activity) {
-        completeIconChange(activity)
+    override fun getName(): String {
+        return NAME
     }
 
     companion object {
