@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import { changeAppIcon, getAppIcon } from 'react-native-dynamic-icon-change';
+// import { iconChange } from '../iconChange';
 
 export default function App() {
   const [currentIcon, setCurrentIcon] = useState<string | null>(null);
@@ -23,6 +24,10 @@ export default function App() {
       console.error(error);
     }
   };
+
+  // useEffect(() => {
+  //   iconChange(1);
+  // });
 
   return (
     <View style={styles.container}>

@@ -6,6 +6,7 @@ module.exports = {
     platforms: {
       android: {
         cmakeListsPath: 'generated/jni/CMakeLists.txt',
+        packageInstance: 'new DynamicIconChange(BuildConfig.APPLICATION_ID)',
       },
     },
   },

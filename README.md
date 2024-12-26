@@ -103,17 +103,13 @@ getAppIcon()
 </dict>
 ```
 
-2. Ensure that the alternate icon assets are added to your Xcode project.
-
-3. add icons to your ios file
+2. add icons to your ios file
    ![](image/ios.png)
 
-4. xCode > General > App Icons and launch Screen > Include all app Icon assets will be selected
+3. xCode > General > App Icons and launch Screen > Include all app Icon assets will be selected
    ![](image/ios2.png)
 
-5. The default icon is named `AppIcon`, and alternate icons should match their respective names in the `CFBundleAlternateIcons` dictionary.
-
-6. cd ios pod update cd ..
+4. cd ios pod update cd ..
 
 ---
 
@@ -211,9 +207,7 @@ getAppIcon()
 2. add icons to your android file
    ![](image/android.png)
 
-3. Ensure each alias has a unique `android:name` and its respective `android:icon` matches the drawable asset.
-
-4. Add corresponding drawable assets for alternate icons in the `res/drawable` directory.
+3. cd android && ./gradlew clean && cd ..
 
 ---
 
@@ -298,7 +292,7 @@ export default App;
 
 ## License
 
-MIT License. See the `LICENSE` file for more details.
+GNU GENERAL PUBLIC License. See the `LICENSE` file for more details.
 
 Rıdvan Üçdağ
 
