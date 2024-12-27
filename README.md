@@ -121,6 +121,7 @@ getAppIcon()
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
 
     <application
       android:name=".MainApplication"
@@ -141,10 +142,9 @@ getAppIcon()
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-      </activity>
+       </activity>
             <activity-alias
             android:name=".MainActivityDefault"
-            android:supportsRtl="true"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher"
@@ -158,7 +158,6 @@ getAppIcon()
         </activity-alias>
       <activity-alias
             android:name=".MainActivityIcon2"
-            android:supportsRtl="true"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_2"
@@ -172,7 +171,6 @@ getAppIcon()
         </activity-alias>
         <activity-alias
             android:name=".MainActivityIcon3"
-            android:supportsRtl="true"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_3"
@@ -184,27 +182,12 @@ getAppIcon()
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity-alias>
-
-        <activity-alias
-            android:name=".MainActivityIcon4"
-            android:supportsRtl="true"
-            android:enabled="false"
-            android:exported="true"
-            android:icon="@mipmap/ic_launcher_4"
-            android:roundIcon="@mipmap/ic_launcher_round_4"
-            android:label="@string/app_name"
-            android:targetActivity=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity-alias>
     </application>
 </manifest>
 
 ```
 
-2. add icons to your android file
+2. android > app > src > main > res add icons to your android file
    ![](image/android.png)
 
 3. cd android && ./gradlew clean && cd ..
@@ -292,7 +275,7 @@ export default App;
 
 ## License
 
-GNU GENERAL PUBLIC License. See the `LICENSE` file for more details.
+MIT License. See the `LICENSE` file for more details.
 
 Rıdvan Üçdağ
 
