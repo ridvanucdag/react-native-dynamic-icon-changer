@@ -245,20 +245,36 @@ const App = () => {
       .catch(console.error);
   };
 
-  return (
-    <View>
-      <Text>Current Icon: {currentIcon}</Text>
-      <Button
-        title="Switch to Alternate Icon"
-        onPress={() => switchIcon('YourIconName')}
-      />
-      <Button
-        title="Revert to Default Icon"
-        onPress={() => switchIcon('Default')}
-      />
-    </View>
-  );
-};
+return (
+  <View>
+    <Text>Current App Icon: {currentIcon}</Text>
+    <Button
+      title="Change iOS Icon to Default"
+      onPress={() => switchIcon(null)}
+    />
+    <Button
+      title="Change iOS Icon to AppIcon2"
+      onPress={() => switchIcon('AppIcon2')}
+    />
+    <Button
+      title="Change iOS Icon to AppIcon3"
+      onPress={() => switchIcon('AppIcon3')}
+    />
+    <Button
+      title="Set Android Icon to Default"
+      onPress={() => switchIcon('Default')}
+    />
+    <Button
+      title="Change Android Icon to Icon2"
+      onPress={() => switchIcon('Icon2')}
+    />
+    <Button
+      title="Change Android Icon to Icon3"
+      onPress={() => switchIcon('Icon3')}
+    />
+  </View>
+);
+
 
 export default App;
 ```
