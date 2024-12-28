@@ -44,8 +44,8 @@ export default function App() {
         onPress={() => switchIcon('AppIcon3')}
       />
       <Button
-        title="Change Icon to AppIcon4"
-        onPress={() => switchIcon('Icon4')}
+        title="Change Icon to AppIcon"
+        onPress={() => switchIcon('AppIcon')}
       />
       {/* <Button title="Return to Default Icon" onPress={() => switchIcon(null)} /> */}
       <Button title="Get Current Icon" onPress={fetchCurrentIcon} />
