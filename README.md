@@ -250,7 +250,7 @@ return (
     <Text>Current App Icon: {currentIcon}</Text>
     <Button
       title="Change iOS Icon to Default"
-      onPress={() => switchIcon(null)}
+      onPress={() => switchIcon('Default')}
     />
     <Button
       title="Change iOS Icon to AppIcon2"

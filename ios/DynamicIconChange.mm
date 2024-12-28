@@ -20,7 +20,7 @@ RCT_EXPORT_METHOD(getAppIcon:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseR
         if (currentIcon) {
             resolve(currentIcon);
         } else {
-            resolve(@"AppIcon");
+            resolve(@"Default");
         }
     });
 }

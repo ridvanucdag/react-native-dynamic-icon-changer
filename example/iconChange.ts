@@ -2,7 +2,7 @@ import { Platform } from 'react-native';
 import { changeAppIcon, getAppIcon } from 'react-native-dynamic-icon-change';
 
 export enum IconNames {
-  AppIcon = 'AppIcon',
+  AppIcon = 'Default',
   AppIcon2 = 'AppIcon2',
   AppIcon3 = 'AppIcon3',
   MainApplication = 'Default',
@@ -13,7 +13,9 @@ export enum IconNames {
 export const getIconName = (iconKey: number): string | null => {
   switch (iconKey) {
     case 1:
-      return Platform.OS === 'android' ? IconNames.MainApplication : null;
+      return Platform.OS === 'android'
+        ? IconNames.MainApplication
+        : IconNames.AppIcon;
     case 2:
       return Platform.OS === 'android'
         ? IconNames.MainApplication2
@@ -23,7 +25,9 @@ export const getIconName = (iconKey: number): string | null => {
         ? IconNames.MainApplication3
         : IconNames.AppIcon3;
     default:
-      return Platform.OS === 'android' ? IconNames.MainApplication : null;
+      return Platform.OS === 'android'
+        ? IconNames.MainApplication
+        : IconNames.AppIcon;
   }
 };
 
@@ -32,7 +36,7 @@ export const iconChange = async (iconKey: number): Promise<void> => {
   try {
     getAppIcon()
       .then((currentIcon: string) => {
-        if (currentIcon !== (iconName ?? IconNames.AppIcon)) {
+        if (currentIcon !== iconName && iconName) {
           changeAppIcon(iconName);
         }
       })

@@ -34,20 +34,30 @@ export default function App() {
       <Text style={styles.text}>
         Current Icon Name: {currentIcon ?? 'Not yet received'}
       </Text>
-
       <Button
-        title="Change Icon to AppIcon3"
+        title="Change iOS Icon to Default"
+        onPress={() => switchIcon('Default')}
+      />
+      <Button
+        title="Change iOS Icon to AppIcon2"
         onPress={() => switchIcon('AppIcon2')}
       />
       <Button
-        title="Change Icon to AppIcon3"
+        title="Change iOS Icon to AppIcon3"
         onPress={() => switchIcon('AppIcon3')}
       />
       <Button
-        title="Change Icon to AppIcon"
-        onPress={() => switchIcon('AppIcon')}
+        title="Set Android Icon to Default"
+        onPress={() => switchIcon('Default')}
       />
-      {/* <Button title="Return to Default Icon" onPress={() => switchIcon(null)} /> */}
+      <Button
+        title="Change Android Icon to Icon2"
+        onPress={() => switchIcon('Icon2')}
+      />
+      <Button
+        title="Change Android Icon to Icon3"
+        onPress={() => switchIcon('Icon3')}
+      />
       <Button title="Get Current Icon" onPress={fetchCurrentIcon} />
     </View>
   );
