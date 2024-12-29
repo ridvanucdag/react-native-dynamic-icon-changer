@@ -67,6 +67,12 @@ getAppIcon()
 
 ---
 
+## Android and İos App icon Generator
+
+Upload your icon to appicon.co, select the necessary options, click the generate button, and download the result.
+
+   ![](image/appicon.png)
+
 ## iOS Configuration
 
 1. Open your `Info.plist` file and define alternate icons:

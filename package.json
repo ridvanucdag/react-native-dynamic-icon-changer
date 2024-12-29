@@ -1,6 +1,6 @@
 {
   "name": "react-native-dynamic-icon-change",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Easily change your app's icon dynamically at runtime on both Android and iOS in React Native apps. Perfect for app branding, themes, or seasonal changes.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
