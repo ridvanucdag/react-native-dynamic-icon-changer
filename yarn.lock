@@ -10595,9 +10595,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-dynamic-icon-change-example@workspace:example":
+"react-native-dynamic-icon-changer-example@workspace:example":
   version: 0.0.0-use.local
-  resolution: "react-native-dynamic-icon-change-example@workspace:example"
+  resolution: "react-native-dynamic-icon-changer-example@workspace:example"
   dependencies:
     "@babel/core": ^7.25.2
     "@babel/preset-env": ^7.25.3
@@ -10614,9 +10614,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-native-dynamic-icon-change@workspace:.":
+"react-native-dynamic-icon-changer@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-native-dynamic-icon-change@workspace:."
+  resolution: "react-native-dynamic-icon-changer@workspace:."
   dependencies:
     "@commitlint/config-conventional": ^17.0.2
     "@evilmartians/lefthook": ^1.5.0

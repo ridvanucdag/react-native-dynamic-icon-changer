@@ -2,7 +2,7 @@ import { NativeModules, Platform } from 'react-native';
 import type { Spec } from './NativeDynamicIconChange';
 
 const LINKING_ERROR =
-  `The 'react-native-dynamic-icon-change' package does not appear to be properly linked. Please ensure the following steps have been completed:\n\n` +
+  `The 'react-native-dynamic-icon-changer' package does not appear to be properly linked. Please ensure the following steps have been completed:\n\n` +
   Platform.select({
     ios: `- Run 'pod install' in the iOS project directory.\n- Make sure to rebuild the app after installation.\n`,
     android: `- Make sure the package is correctly installed in your build.gradle files.\n- Rebuild the app after installation.\n`,

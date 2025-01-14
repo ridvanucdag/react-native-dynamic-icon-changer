@@ -6,9 +6,9 @@ This library enables React Native developers to dynamically change the app icon 
 
 ## Package Statistics
 
-![NPM Weekly Downloads](https://img.shields.io/npm/dw/react-native-dynamic-icon-change.svg)
-![NPM Monthly Downloads](https://img.shields.io/npm/dm/react-native-dynamic-icon-change.svg)
-![NPM Total Downloads](https://img.shields.io/npm/dt/react-native-dynamic-icon-change.svg)
+![NPM Weekly Downloads](https://img.shields.io/npm/dw/react-native-dynamic-icon-changer.svg)
+![NPM Monthly Downloads](https://img.shields.io/npm/dm/react-native-dynamic-icon-changer.svg)
+![NPM Total Downloads](https://img.shields.io/npm/dt/react-native-dynamic-icon-changer.svg)
 
 ## Features
 
@@ -21,14 +21,14 @@ This library enables React Native developers to dynamically change the app icon 
 ## Installation
 
 ```bash
-npm install react-native-dynamic-icon-change
-yarn add react-native-dynamic-icon-change
+npm install react-native-dynamic-icon-changer
+yarn add react-native-dynamic-icon-changer
 ```
 
 Link the native modules (if auto-linking is not enabled):
 
 ```bash
-react-native link react-native-dynamic-icon-change
+react-native link react-native-dynamic-icon-changer
 ```
 
 ---
@@ -38,7 +38,7 @@ react-native link react-native-dynamic-icon-change
 ### Import the Library
 
 ```javascript
-import { changeAppIcon, getAppIcon } from 'react-native-dynamic-icon-change';
+import { changeAppIcon, getAppIcon } from 'react-native-dynamic-icon-changer';
 ```
 
 ### Change App Icon
@@ -71,7 +71,7 @@ getAppIcon()
 
 Upload your icon to appicon.co, select the necessary options, click the generate button, and download the result.
 
-   ![](image/appicon.png)
+![](image/appicon.png)
 
 ## iOS Configuration
 
@@ -236,7 +236,7 @@ Here is a simple example demonstrating the usage:
 ```javascript
 import React, { useEffect, useState } from 'react';
 import { View, Button, Text } from 'react-native';
-import { changeAppIcon, getAppIcon } from 'react-native-dynamic-icon-change';
+import { changeAppIcon, getAppIcon } from 'react-native-dynamic-icon-changer';
 
 const App = () => {
   const [currentIcon, setCurrentIcon] = useState('');

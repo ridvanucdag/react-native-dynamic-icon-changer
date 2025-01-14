@@ -1,6 +1,6 @@
 {
-  "name": "react-native-dynamic-icon-change",
-  "version": "1.1.7",
+  "name": "react-native-dynamic-icon-changer",
+  "version": "1.1.0",
   "description": "Easily change your app's icon dynamically at runtime on both Android and iOS in React Native apps. Perfect for app branding, themes, or seasonal changes.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -37,7 +37,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-dynamic-icon-change-example",
+    "example": "yarn workspace react-native-dynamic-icon-changer-example",
     "test": "jest",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -62,14 +62,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ridvanucdag/react-native-dynamic-icon-change.git"
+    "url": "https://github.com/ridvanucdag/react-native-dynamic-icon-changer.git"
   },
-  "author": "Rıdvan Üçdağ <67285346+ridvanucdag@users.noreply.github.com> (https://github.com/ridvanucdag/react-native-dynamic-icon-change)",
+  "author": "Rıdvan Üçdağ <67285346+ridvanucdag@users.noreply.github.com> (https://github.com/ridvanucdag/react-native-dynamic-icon-changer)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ridvanucdag/react-native-dynamic-icon-change/issues"
+    "url": "https://github.com/ridvanucdag/react-native-dynamic-icon-changer/issues"
   },
-  "homepage": "https://github.com/ridvanucdag/react-native-dynamic-icon-change#readme",
+  "homepage": "https://github.com/ridvanucdag/react-native-dynamic-icon-changer#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
-import { changeAppIcon, getAppIcon } from 'react-native-dynamic-icon-change';
+import { changeAppIcon, getAppIcon } from 'react-native-dynamic-icon-changer';
 // import { iconChange } from '../iconChange';
 
 export default function App() {

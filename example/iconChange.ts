@@ -1,5 +1,5 @@
 import { Platform } from 'react-native';
-import { changeAppIcon, getAppIcon } from 'react-native-dynamic-icon-change';
+import { changeAppIcon, getAppIcon } from 'react-native-dynamic-icon-changer';
 
 export enum IconNames {
   AppIcon = 'Default',

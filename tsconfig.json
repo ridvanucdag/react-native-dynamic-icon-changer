@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-dynamic-icon-change": ["./src/index"]
+      "react-native-dynamic-icon-changer": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
